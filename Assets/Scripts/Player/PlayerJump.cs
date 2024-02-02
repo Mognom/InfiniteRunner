@@ -10,34 +10,37 @@ public class PlayerJump : MonoBehaviour {
     [SerializeField] private float groundedDistance;
 
     private PlayerInputActions playerInputActions;
-    private Rigidbody2D rb;
-    private BoxCollider2D boxCollider;
+    private Rigidbody rb;
+    private BoxCollider boxCollider;
 
     void Awake() {
         playerInputActions = new PlayerInputActions();
         playerInputActions.Enable();
         playerInputActions.Player.Jump.performed += OnPlayerJump;
 
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody>();
 
-        boxCollider = GetComponent<BoxCollider2D>();
+        boxCollider = GetComponent<BoxCollider>();
     }
 
     private void OnPlayerJump(InputAction.CallbackContext context) {
         if (CheckGrounded()) {
             rb.velocity = Vector3.zero; // Ensure it is not falling anymore
-            rb.AddForce(Vector2.up * jumpStrenght, ForceMode2D.Impulse);
+            rb.AddForce(Vector3.up * jumpStrenght, ForceMode.Impulse);
         }
     }
 
     private bool CheckGrounded() {
-        Vector2 direction = Vector2.down;
+        Vector3 direction = Vector3.down;
 
-        RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, direction, groundedDistance, groundLayer);
-        if (hit && hit.collider != null) {
+        // Perform a boxcast from above the player collider to avoid starting in contact to the ground
+        bool hit = Physics.BoxCast(boxCollider.bounds.center + Vector3.up * groundedDistance, boxCollider.bounds.size, direction, this.transform.rotation, groundedDistance * 2, groundLayer);
+        Debug.Log(hit);
+        if (hit) {
             return true;
         }
 
+        Debug.Log("from" + (boxCollider.bounds.center + Vector3.up * groundedDistance));
         return false;
     }
 }
