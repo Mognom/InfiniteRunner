@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 6390078421698721940}
   - component: {fileID: 360758395020101659}
   - component: {fileID: 8654856183672522584}
-  m_Layer: 0
+  - component: {fileID: 6300679539117185118}
+  m_Layer: 8
   m_Name: GroundTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,6 +99,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshOptions:
   - mesh: {fileID: -7513297493162946847, guid: fb96e75604d0cb741b050da9038b49cf, type: 3}
-    weight: 0.8
+    weight: 1
   - mesh: {fileID: 6461220022748230971, guid: 1df04357774ef4e43bdde1b93957d185, type: 3}
     weight: 1
+--- !u!65 &6300679539117185118
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074205589056289516}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
