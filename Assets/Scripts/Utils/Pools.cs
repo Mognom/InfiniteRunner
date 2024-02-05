@@ -88,12 +88,19 @@ namespace MognomUtils {
         public static T Spawn<T>(this T prefab, Vector3 position, Quaternion rotation) where T : MonoBehaviour {
             return ObjectPool.Spawn(prefab, position, rotation);
         }
+        public static Transform Spawn(this Transform prefabTransform, Vector3 position, Quaternion rotation) {
 
+            return ObjectPool.Spawn(prefabTransform.gameObject, position, rotation).transform;
+        }
         public static void Recycle(this GameObject gameObject) {
             ObjectPool.Recycle(gameObject);
         }
         public static void Recycle<T>(this T gameObject) where T : MonoBehaviour {
             ObjectPool.Recycle(gameObject);
+        }
+
+        public static void Recycle(this Transform transform) {
+            ObjectPool.Recycle(transform.gameObject);
         }
     }
 }
