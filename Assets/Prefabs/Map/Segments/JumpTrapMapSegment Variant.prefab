@@ -338,9 +338,9 @@ MonoBehaviour:
   items:
   - {fileID: 7140756391757755}
   positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: -1, y: 0, z: 0}
-  - {x: 1, y: 0, z: 0}
+  - {x: 0, y: 0.6, z: 0}
+  - {x: -1, y: 0.6, z: 0}
+  - {x: 1, y: 0.6, z: 0}
 --- !u!4 &3136471542422816910 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5131093252134602366, guid: bb1d72b10a0a2884fa01c171042921f5, type: 3}

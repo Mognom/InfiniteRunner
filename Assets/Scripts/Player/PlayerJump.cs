@@ -8,6 +8,7 @@ public class PlayerJump : MonoBehaviour {
     // Ground check values
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private float groundedDistance;
+    [SerializeField] private float fallMultiplier;
 
     private PlayerInputActions playerInputActions;
     private Rigidbody rb;
@@ -23,12 +24,20 @@ public class PlayerJump : MonoBehaviour {
         boxCollider = GetComponent<BoxCollider>();
     }
 
+    private void Update() {
+        if (rb.velocity.y < 0) {
+            rb.velocity += (fallMultiplier * Time.deltaTime) * Physics.gravity.y * Vector3.up;
+        }
+    }
+
     private void OnPlayerJump(InputAction.CallbackContext context) {
         if (CheckGrounded()) {
             rb.velocity = Vector3.zero; // Ensure it is not falling anymore
             rb.AddForce(Vector3.up * jumpStrenght, ForceMode.Impulse);
         }
     }
+
+
 
     private bool CheckGrounded() {
         Vector3 direction = Vector3.down;
