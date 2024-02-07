@@ -35,12 +35,10 @@ public class PlayerJump : MonoBehaviour {
 
         // Perform a boxcast from above the player collider to avoid starting in contact to the ground
         bool hit = Physics.BoxCast(boxCollider.bounds.center + Vector3.up * groundedDistance, boxCollider.bounds.size, direction, this.transform.rotation, groundedDistance * 2, groundLayer);
-        Debug.Log(hit);
         if (hit) {
             return true;
         }
 
-        Debug.Log("from" + (boxCollider.bounds.center + Vector3.up * groundedDistance));
         return false;
     }
 }

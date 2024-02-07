@@ -98,6 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
+  changeLineTime: 0.2
+  bufferInputDuration: 0.1
 --- !u!114 &7071307766559116261
 MonoBehaviour:
   m_ObjectHideFlags: 0
