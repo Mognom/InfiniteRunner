@@ -9,24 +9,29 @@ public class MapController : MonoBehaviour {
     [SerializeField] private Transform[] mapSegments;
     [SerializeField] private Transform safeSegment;
     [SerializeField] private float replaceInSeconds; // Should be at least player velocity / 6
+    private float timeSinceLastUpdate;
 
 
     [Tooltip("How many safe segments to put initially")]
     [SerializeField] private int initialSegmentCount = 3;
     private List<Transform> currentSegments;
-
     private Vector3 nextSpawnPosition = Vector3.zero;
 
-
-    private float timeSinceLastUpdate;
+    [SerializeField] private VoidEventChannel playerDeadChannel;
 
     private void Awake() {
+        playerDeadChannel.Channel += OnPlayerDead;
         currentSegments = new List<Transform>();
         nextSpawnPosition.z = currentSegments.Count * 3;
         for (int i = 0; i < initialSegmentCount; i++) {
             AddNewSegment(true);
         }
         AddNewSegment(false);
+
+    }
+
+    private void OnPlayerDead() {
+        Destroy(this); // Remove this script so the map stops updating
     }
 
     private void Update() {

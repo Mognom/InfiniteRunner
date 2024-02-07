@@ -673,6 +673,7 @@ GameObject:
   - component: {fileID: 9174719034966678554}
   - component: {fileID: 7918983012745195704}
   - component: {fileID: 2303127830212723543}
+  - component: {fileID: 3137949694359776485}
   m_Layer: 0
   m_Name: PlayerPhysics
   m_TagString: Untagged
@@ -777,3 +778,18 @@ MonoBehaviour:
     m_Bits: 256
   groundedDistance: 0.5
   fallMultiplier: 2
+--- !u!114 &3137949694359776485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8673332502614647098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fdf22a37979ea8448fe1841d74d496b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trapTag: Trap
+  playerRagdoll: {fileID: 720043941614059223, guid: e80629a88e84d7e469ed06ec27da67b9, type: 3}
+  playerDeadChannel: {fileID: 11400000, guid: 85d268ebfa0b6ba43b94876b47f1e96d, type: 2}
