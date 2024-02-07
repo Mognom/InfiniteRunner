@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -5,18 +6,22 @@ using UnityEngine;
 public class MainMenuManager : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI bestScoreText;
     [SerializeField] private TextMeshProUGUI currentScoreText;
-    [SerializeField] private string currentScoreString;
-    [SerializeField] private string bestScoreString;
 
     private void Start() {
         int newScore = GameStateManager.I.GetCurrentScore();
+        string newTime = GameStateManager.I.GetCurrentTime();
         int bestScore = GameStateManager.I.GetBestScore();
+        string bestTime = GameStateManager.I.GetBestTime();
 
         if (newScore == -1) {
             currentScoreText.text = "";
         } else {
-            currentScoreText.text = currentScoreString + newScore;
+            currentScoreText.text = String.Format(currentScoreText.text, newScore, newTime);
         }
-        bestScoreText.text = bestScoreString + bestScore;
+        if (bestScore <= 0) {
+            bestScoreText.text = "";
+        } else {
+            bestScoreText.text = String.Format(bestScoreText.text, bestScore, bestTime);
+        }
     }
 }
