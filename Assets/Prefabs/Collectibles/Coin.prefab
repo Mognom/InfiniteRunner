@@ -205,3 +205,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectibleVisual: {fileID: 5062693391466470675}
+  scoreValue: 1
+  scoreCollectedChannel: {fileID: 11400000, guid: 3a28af0977a34cf41b08d1547e047a9a, type: 2}
