@@ -34,7 +34,7 @@ public class PlayerMove : MonoBehaviour {
     }
 
     private void HandleForwardMovement() {
-        transform.Translate(speed * Time.deltaTime * transform.forward);
+        transform.parent.Translate(speed * Time.deltaTime * transform.forward);
     }
 
     private void HandleHorizontalMovement() {
