@@ -168,12 +168,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1491466915195414879, guid: 118823958981a294da34a6851facbb95, type: 3}
       propertyPath: items.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1491466915195414879, guid: 118823958981a294da34a6851facbb95, type: 3}
       propertyPath: items.Array.data[1]
       value: 
       objectReference: {fileID: 6438284639031318083}
+    - target: {fileID: 1491466915195414879, guid: 118823958981a294da34a6851facbb95, type: 3}
+      propertyPath: items.Array.data[2]
+      value: 
+      objectReference: {fileID: 1755649029090585100}
     - target: {fileID: 1771882046436646542, guid: 118823958981a294da34a6851facbb95, type: 3}
       propertyPath: m_Name
       value: 2RowTrapMapSegment (2) Variant
@@ -223,7 +227,8 @@ PrefabInstance:
       value: Traps1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2676746494413950916, guid: 118823958981a294da34a6851facbb95, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2984969701891920419, guid: 118823958981a294da34a6851facbb95, type: 3}
       insertIndex: -1
@@ -233,6 +238,11 @@ PrefabInstance:
 --- !u!4 &543502274915905893 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2984969701891920419, guid: 118823958981a294da34a6851facbb95, type: 3}
+  m_PrefabInstance: {fileID: 3379483474206974790}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1755649029090585100 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3943753792798640458, guid: 118823958981a294da34a6851facbb95, type: 3}
   m_PrefabInstance: {fileID: 3379483474206974790}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7380851829435344329
