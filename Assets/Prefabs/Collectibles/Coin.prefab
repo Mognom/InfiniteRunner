@@ -208,6 +208,7 @@ MonoBehaviour:
   collectibleVisual: {fileID: 5062693391466470675}
   scoreValue: 1
   scoreCollectedChannel: {fileID: 11400000, guid: 3a28af0977a34cf41b08d1547e047a9a, type: 2}
+  playerTag: Player
 --- !u!82 &5471862594244427339
 AudioSource:
   m_ObjectHideFlags: 0
@@ -220,8 +221,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b147b510d7ba7a34ba618d91d09463f4, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.5
+  m_Pitch: 2
   Loop: 0
   Mute: 0
   Spatialize: 0
