@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshOptions:
   - mesh: {fileID: -7513297493162946847, guid: fb96e75604d0cb741b050da9038b49cf, type: 3}
-    weight: 1
+    weight: 0.8
   - mesh: {fileID: 6461220022748230971, guid: 1df04357774ef4e43bdde1b93957d185, type: 3}
     weight: 1
 --- !u!65 &6300679539117185118
