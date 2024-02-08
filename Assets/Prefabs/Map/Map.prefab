@@ -50,5 +50,5 @@ MonoBehaviour:
   - {fileID: 3136471542422816910, guid: 1fd7489fb5ae3cf4cb92dbdceb7d9c1d, type: 3}
   safeSegment: {fileID: 5131093252134602366, guid: bb1d72b10a0a2884fa01c171042921f5, type: 3}
   replaceInSeconds: 1
-  initialSegmentCount: 5
+  initialSegmentCount: 6
   playerDeadChannel: {fileID: 11400000, guid: 85d268ebfa0b6ba43b94876b47f1e96d, type: 2}

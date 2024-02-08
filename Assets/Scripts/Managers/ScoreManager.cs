@@ -25,7 +25,7 @@ public class ScoreManager : MonoBehaviour {
 
     private void Update() {
         if (!gameOver) {
-            currentTime += Time.deltaTime;
+            currentTime += Time.unscaledDeltaTime;
             UpdateTimeText();
         }
     }
@@ -52,5 +52,9 @@ public class ScoreManager : MonoBehaviour {
     private void OnPlayerDead() {
         gameOver = true;
         setScoreChannel.PostEvent(currentScore, FormatTime(currentTime));
+    }
+
+    public float GetCurrentTime() {
+        return currentTime;
     }
 }
