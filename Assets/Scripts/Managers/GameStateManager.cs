@@ -59,11 +59,11 @@ public class GameStateManager : PersistentSingleton<GameStateManager> {
         switch (currentState) {
             case GameState.MAINMENU:
                 setScoreChannel.Channel += OnSetScore;
-                this.SwapScene(gameSceneName);
+                SceneManager.LoadScene(gameSceneName);
                 currentState = GameState.GAME;
                 break;
             case GameState.GAME:
-                this.SwapScene(mainMenuSceneName);
+                SceneManager.LoadScene(mainMenuSceneName);
                 setScoreChannel.Channel -= OnSetScore;
                 currentState = GameState.MAINMENU;
                 break;
